@@ -1,0 +1,61 @@
+body {
+    background-color: #222;
+}
+/* HM1:make it look better*/
+.screen {
+    width: 500px;
+    height: 250px;
+    border: 1px solid #555;
+    position: relative;
+}
+
+.mold {
+    width: 50px;
+    height: 50px;   
+    background-image: url(icons/basket.png);
+    background-size: contain;   
+    position: absolute;
+    bottom: 0;
+    left: 225px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(119, 7, 65);
+    font-size: 20px;
+    font-weight: 700;
+}
+.lead {
+    width: 150px;
+    height: 10px;
+    background-color: #555;
+    position: absolute;
+    bottom: 100px;
+    transform: rotate(25deg);
+}
+.egg {
+    width: 25px;
+    height: 25px;
+    background-image: url(icons/egg.svg);
+    background-size: contain;
+    position: absolute;
+    bottom: 0;
+}
+.egg-broken {
+    background-image: url(icons/egg-broken.svg);
+}
+.move {
+    animation: move 5s linear;
+}
+.fall {
+    animation: fall 1s ease-in;
+    animation-fill-mode: forwards;
+}
+
+@keyframes move {
+    from {left: 0; transform: rotate(0);}
+    to {left: 150px; transform: rotate(5turn);}
+}
+@keyframes fall {
+    from {bottom: 0;left: 150px; transform: rotate(0)}
+    to {bottom: -50px; left: 180px; transform: rotate(1turn)}
+}
