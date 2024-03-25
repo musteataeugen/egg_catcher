@@ -33,8 +33,7 @@ const animationEnd = (e) => {
             // HM3: do the same using .className
             // egg.classList.remove('move')
             // egg.classList.add('fall')
-            egg.className = egg.className.replace("move", "")
-            egg.className += ' fall'
+            egg.className = egg.className.replace("move", " fall")         
             if (score > 0) {
             document.querySelector('.mold').innerHTML = score
             } else {
