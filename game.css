@@ -24,6 +24,14 @@ body {
     font-size: 20px;
     font-weight: 700;
 }
+.scoreDiv {
+    position: absolute;
+    width: 500px;
+    height: 20px;
+    background-color: #555;
+    color: orange;
+    bottom: -20px;
+}
 .lead {
     width: 150px;
     height: 10px;
@@ -31,6 +39,10 @@ body {
     position: absolute;
     bottom: 100px;
     transform: rotate(25deg);
+}
+.lead.right {
+    transform: scalex(-1) rotate(25deg);
+    right: 0;
 }
 .egg {
     width: 25px;
@@ -47,8 +59,8 @@ body {
     animation: move 5s linear;
 }
 .fall {
-    animation: fall 1s ease-in;
-    animation-fill-mode: forwards;
+    animation: fall 1s ease-in !important;
+    animation-fill-mode: forwards !important;
 }
 
 @keyframes move {
